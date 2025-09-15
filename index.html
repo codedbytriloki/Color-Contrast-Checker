@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Contrast Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Color Contrast Checker</h1>
+    <div class="app">
+      <div class="controls">
+        <label for="">Text Color : 
+          <input type="color" id="textColorPicker">
+          <input type="text" id="textHex" value="#000000">
+        </label>
+
+        <label for="">Background Color :
+          <input type="color" id="bgColorPicker">
+          <input type="text" id="bgHex" value="#ffffff">
+        </label>
+
+        <label for="">Font Size :
+          <input type="range" id="fontSize" min="12" max="48" value="16">
+          <span id="fontSizeValue">16px</span>
+        </label>
+
+        <label for="">Font Weight :
+          <select id="fontWeight">
+            <option value="normal">Normal</option>
+            <option value="bold">Bold</option>
+          </select>
+        </label>
+
+        <button id="randomBtn">Random Colors</button>
+      </div>
+
+      <!-- Result -->
+       <div class="result">
+        <h2>Results</h2>
+        <p>Contrast Ratio : <span id="ratio">0</span></p>
+        <div class="badges">
+          <p>AA Normal : <span id="aaNormal"></span></p>
+          <p>AA Large : <span id="aaLarge"></span></p>
+          <p>AAA Normal : <span id="aaaNormal"></span></p>
+          <p>AAA Large : <span id="aaaLarge"></span></p>
+        </div>
+
+        <div id="previewBox" class="preview">This is a sample text.</div>
+       </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
